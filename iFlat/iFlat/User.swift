@@ -11,10 +11,10 @@ import UIKit
 
 class User:ManipulableUser
 {
-    var country: String?
+    var city: String?
     var profileImage: UIImage?
     var id: String?
-    var name:String?
+    var name:String? 
     var surname:String?
     var email:String?
     var password:String?
@@ -25,7 +25,7 @@ class User:ManipulableUser
 
     
     //
-    required init(name:String, surname:String, email:String,password:String, birthDate:String, Gender:String, profileImage img:UIImage, country:String)
+    required init(name:String, surname:String, email:String,password:String, birthDate:String, Gender:String, profileImage img:UIImage, city:String)
     {
         self.name = name
         self.surname = surname
@@ -33,7 +33,7 @@ class User:ManipulableUser
         self.password = password
         self.birthDate = birthDate
         self.Gender = Gender
-        self.country = country
+        self.city = city
         self.profileImage = img
         DB_ENDPOINT = FIRUSER()
     }

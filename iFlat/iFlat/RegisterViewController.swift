@@ -28,7 +28,7 @@ class RegisterViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
     
     @IBOutlet weak var birthDate_PickerView: UIDatePicker!
     
-    @IBOutlet weak var country_PickerView: UIPickerView!
+    @IBOutlet weak var city_PickerView: UIPickerView!
     
     @IBOutlet weak var password_TextField: UITextField!
     
@@ -46,8 +46,8 @@ class RegisterViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
        gender_PickerView.delegate = self
        gender_PickerView.dataSource = self
         
-       country_PickerView.dataSource = self
-       country_PickerView.delegate = self
+       city_PickerView.dataSource = self
+       city_PickerView.delegate = self
         
         myImgPickerController.delegate = self
         
@@ -63,8 +63,8 @@ class RegisterViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
         
         dbbridge.getCities { (cities) in
             self.cities = cities
-            self.country_PickerView.reloadAllComponents()
-            self.user.country = self.cities[0]
+            self.city_PickerView.reloadAllComponents()
+            self.user.city = self.cities[0]
             
         }
 
@@ -72,7 +72,7 @@ class RegisterViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
         user.Gender = User.staticGender[0]
         
         
-        country_PickerView.selectedRow(inComponent: 0)
+        city_PickerView.selectedRow(inComponent: 0)
         
         ImgPickerForCamera.delegate = self
 }
@@ -186,7 +186,7 @@ class RegisterViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
         }
         
         if pickerView.tag == 1{
-            user.country = self.cities[row]
+            user.city = self.cities[row]
         }
     }
     

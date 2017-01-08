@@ -237,7 +237,7 @@ class FIRUSER: FIRUSERDelegate {
                 usr.name = objdict["firstName"]!
                 usr.birthDate = objdict["birthdate"]!
                 usr.surname = objdict["lastName"]!
-                usr.country = objdict["country"]!
+                usr.city = objdict["city"]!
                 completion(usr)
             }
             else
@@ -565,7 +565,7 @@ class FIRUSER: FIRUSERDelegate {
                 usr.name = objdict["firstName"]!
                 usr.birthDate = objdict["birthdate"]!
                 usr.surname = objdict["lastName"]!
-                usr.country = objdict["country"]!
+                usr.city = objdict["city"]!
                 
                 
                 completion(usr)
@@ -651,7 +651,7 @@ class FIRUSER: FIRUSERDelegate {
                         "firstName": newUsr.name!,
                         "lastName" : newUsr.surname!,
                         "birthdate": newUsr.birthDate!,
-                        "country": newUsr.country!,
+                        "city": newUsr.city!,
                         "email": newUsr.email!,
                         "gender": newUsr.Gender!
                     ]
@@ -699,7 +699,7 @@ class FIRUSER: FIRUSERDelegate {
                     "email": usr.email!,
                     "gender": usr.Gender!,
                     "birthdate": usr.birthDate!,
-                    "country": usr.country!,
+                    "city": usr.city!,
                     "isActive": "true"
                     ],
                     withCompletionBlock: { (err, ref) in

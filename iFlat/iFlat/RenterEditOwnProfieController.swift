@@ -309,7 +309,7 @@ extension RenterEditOwnProfieController : ShowAlert,UIImagePickerControllerDeleg
         
        
         
-        loginUser.country = cities[row]
+        loginUser.city = cities[row]
         
     }
     
